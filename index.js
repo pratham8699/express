@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const port = 8000;
 app.use('/',require('./route'));
+app.set('viewengine','ejs');
+app.set('views','./views');
+
 app.listen(port,(err)=>
 {
     if(err){
